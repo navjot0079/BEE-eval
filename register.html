@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Organisers | Tivotal</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+   
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><span>E</span>ventify</a>
+
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#service">Service</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#price">Price</a>
+        <a href="#review">Review</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+      <div id="menu-bars" class="fas fa-bars"></div>
+      <section class="contact" id="contact">
+        <br><Br><br><br><br><br>
+        <h1 class="heading"><span>Contact</span> us</h1>
+  
+        <form action="/register"  method="POST">
+          <div class="inputBox">
+            <input type="text" placeholder="name" id="name" required name="name"/>
+            <input type="email" placeholder="email" id="email" required name="email"/>
+            <input type="text" placeholder="City" id="city" required name="city"/>
+            <input type="text" placeholder="Number" id="number" required name="number"/>
+            <textarea
+            name=""
+            placeholder="message"
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+          </div>
+         
+          <button type="submit"  class="btn" >Submit</button>
+        </form>
+      </section>
+      <section class="footer">
+        <div class="box-container">
+          <div class="box">
+            <h3>branches</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> bangalore </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> hyderabad </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> delhi </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> kolkata </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> chennai </a>
+          </div>
+  
+          <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> service </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> about </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> gallery </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> price </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> reivew </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> contact </a>
+          </div>
+  
+          <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> eventify@gmail.com </a>
+            <a href="#"> <i class="fas fa-envelope"></i> eventifyind@gmail.com </a>
+            <a href="#">
+              <i class="fas fa-map-marker-alt"></i> bangalore, india - 560054
+            </a>
+          </div>
+  
+          <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin-in"></i> linkedin </a>
+          </div>
+        </div>
+  
+        <div class="credit">
+          created by <span>Tivotal</span> | all rights reserved
+        </div>
+      </section>
+
+  
+      
+  
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+      <script src="app.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  const styles = `
+    :root { 
+      --theme-color: #3867d6;
+    }
+
+    * {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: 0.2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-padding-top: 7rem;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #222;
+    }
+
+    section {
+      padding: 2rem 9%;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10000;
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 9%;
+    }
+
+    
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.heading span {
+  color: var(--theme-color);
+  text-transform: uppercase;
+}
+
+    .header .logo {
+      font-weight: bolder;
+      color: #fff;
+      font-size: 2.5rem;
+    }
+
+    .header .logo span {
+      color: var(--theme-color);
+    }
+
+    .header .navbar a {
+      font-size: 1.7rem;
+      color: #fff;
+      margin-left: 2rem;
+    }
+
+    .header .navbar a:hover {
+      color: var(--theme-color);
+    }
+
+    #menu-bars {
+      font-size: 3rem;
+      color: #fff;
+      cursor: pointer;
+      display: none;
+    }
+
+    .home .content {
+      text-align: center;
+      padding-top: 6rem;
+      margin: 2rem auto;
+      max-width: 70rem;
+    }
+
+    .home .content h3 {
+      color: #fff;
+      font-size: 4.5rem;
+      text-transform: uppercase;
+    }
+
+    .home .content h3 span {
+      color: var(--theme-color);
+      text-transform: uppercase;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.8rem 3rem;
+      font-size: 1.7rem;
+      border-radius: 0.5rem;
+      background: #666;
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: var(--theme-color);
+    }
+
+    .contact form {
+      max-width: 70rem;
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    .contact form .inputBox {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .contact form .inputBox input,
+    .contact form textarea {
+      width: 100%;
+      background: #333;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 0.7rem 0;
+      font-size: 1.5rem;
+      color: #fff;
+      text-transform: none;
+    }
+
+    .contact form .inputBox input::placeholder,
+    .contact form textarea::placeholder {
+      color: #eee;
+      text-transform: capitalize;
+    }
+
+    .contact form .inputBox input:focus,
+    .contact form textarea:focus {
+      background: #444;
+    }
+
+    .contact form .inputBox input {
+      width: 49%;
+    }
+
+    .contact form textarea {
+      resize: none;
+    }
+      .footer {
+  background: #111;
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #eee;
+}
+
+.footer .box-container .box a i {
+  padding-right: 0.5rem;
+  color: var(--theme-color);
+}
+
+.footer .box-container .box a:hover i {
+  padding-right: 1.5rem;
+  color: #fff;
+}
+
+.footer .credit {
+  text-align: center;
+  border-top: 0.1rem solid #222;
+  color: #fff;
+  padding: 2rem;
+  padding-top: 2.5rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.footer .credit span {
+  color: var(--theme-color);
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #444;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--theme-color);
+  border-radius: 5rem;
+}
+  `;
+
+  const styleSheet = document.createElement("style");
+  styleSheet.type = "text/css";
+  styleSheet.innerText = styles;
+  document.head.appendChild(styleSheet);
+});
+
+      </script>
+</body>
+</html>
