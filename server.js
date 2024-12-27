@@ -5,7 +5,6 @@ const server = http.createServer((req, res) => {
     let { method } = req;
 
     if (method == "GET") {
-        //get request handling
         if (req.url === "/") {
             console.log("inside / route and Get rquest");
             fs.readFile("User.json", "utf8", (err, data) => {
@@ -19,7 +18,6 @@ const server = http.createServer((req, res) => {
                     res.end(data);
                 }
             });
-            //   res.end("welcome to home route");
         } else if (req.url == "/allstudent") {
             fs.readFile("allstudent.html", "utf8", (err, data) => {
                 if (err) {
@@ -40,34 +38,27 @@ const server = http.createServer((req, res) => {
                     res.end(data);
                 }
             });
-        } else{
-            //error handlings
             console.log(req.url);  
             res.writeHead(404);
             res.end("Not Found");
         }
     }
 
-
-
-
-        // post method handling and // Store the user data in a file 
     else {
         if (req.url === "/register") {
             console.log("inside /register route and post request");
             let body = "";
             req.on("data", (chunk) => {
                 body += chunk.toString();
-                //  console.log(chunk);
             });
             req.on("end", () => {
-                let readdata = fs.readFileSync("User.json", "utf-8"); //data stored in string type
+                let readdata = fs.readFileSync("User.json", "utf-8"); 
                 console.log(readdata);
 
-                if (!readdata) {  // if file is empty add an empty array
+                if (!readdata) {  
                     fs.writeFileSync("User.json", JSON.stringify([]));
                 }
-                else {      //if file have already some data
+                else {     
                     let jsonData = JSON.parse(readdata);
                     let users = [...jsonData];
                     console.log(users);
